@@ -17,10 +17,10 @@
         startMenu="no"
 		startup="no"
 		runAsAdministrator="true">
-	</shortcut>	
+	</shortcut>
 	<shortcut
 		name="SundaCoin Wallet"
-		target="http://localhost:4268/index.html"
+		target="http://localhost:78632/index.html"
 		commandLine=""
 		workingDirectory="$INSTALL_PATH"
         description="Launch SundaCoin wallet in browser"
@@ -32,5 +32,5 @@
         applications="no"
         startMenu="no"
 		startup="no">
-	</shortcut>	
+	</shortcut>
 </shortcuts>
