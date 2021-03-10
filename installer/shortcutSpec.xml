@@ -20,7 +20,7 @@
 	</shortcut>
 	<shortcut
 		name="SundaCoin Wallet"
-		target="http://localhost:78632/index.html"
+		target="http://localhost:7862/index.html"
 		commandLine=""
 		workingDirectory="$INSTALL_PATH"
         description="Launch SundaCoin wallet in browser"
