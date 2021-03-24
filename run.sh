@@ -2,14 +2,16 @@
 
 desktop=0
 authbind=0
-daemon=0
+daemon=1
+
+APPLICATION="SundaCoin"
 
 help()
 {
     echo "Parameters:"
     echo
     echo "  --desktop : Force desktop mode in the current directory."
-    echo "  --daemon  : Start in daemon mode (background). Use stop.sh to stop the node."
+    echo "  --no-daemon  : Start without daemon mode (background). Use stop.sh to stop the node."
     echo "  --authbind: Use authbind (installed separately) to allow binding of privileged ports."
     exit
 }
@@ -20,7 +22,7 @@ while [ "$1" != "" ]; do
                        ;;
         --authbind )   authbind=1
                        ;;
-        --daemon )     daemon=1
+        --no-daemon )     daemon=0
                        ;;
         * )            help
                        ;;
@@ -48,8 +50,8 @@ if [ $desktop -eq 1 ]; then
   ${JAVACMD} -cp classes:lib/*:conf:addons/classes:addons/lib/*:javafx-sdk/lib/* -Dnxt.runtime.mode=desktop -Dnxt.runtime.dirProvider=nxt.env.DefaultDirProvider nxt.Nxt
 elif [ $daemon -eq 1 ]; then
   echo "Starting daemon mode"
-  if [ -e ~/.nxt/nxt.pid ]; then
-    PID=`cat ~/.nxt/nxt.pid`
+  if [ -e SundaCoin.pid ]; then
+    PID=`cat SundaCoin.pid`
     ps -p $PID > /dev/null
     STATUS=$?
     if [ $STATUS -eq 0 ]; then
@@ -61,7 +63,7 @@ elif [ $daemon -eq 1 ]; then
   DIR=`dirname "$0"`
   cd "${DIR}"
   nohup ${JAVACMD} -cp classes:lib/*:conf:addons/classes:addons/lib/*:javafx-sdk/lib/* nxt.Nxt > /dev/null 2>&1 &
-  echo $! > ~/.nxt/nxt.pid
+  echo $! > SundaCoin.pid
   cd - > /dev/null
 else
   echo "Starting default mode"

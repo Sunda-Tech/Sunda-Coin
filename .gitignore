@@ -37,3 +37,6 @@ deploy.sh
 /ardor
 /ardor.exe
 /ardorservice.exe
+SundaCoin.pid
+logs/*
+!logs/placeholder.txt

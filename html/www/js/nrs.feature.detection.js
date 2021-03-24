@@ -43,18 +43,18 @@ var NRS = (function (NRS) {
     };
 
     NRS.isExternalLinkVisible = function() {
-        // When using JavaFX add a link to a web wallet except on Lisnd since on Ubuntu it sometimes hangs
+        // When using JavaFX add a link to a web wallet except on Linux since on Ubuntu it sometimes hangs
         if (NRS.isMobileApp()) {
             return false;
         }
-        return !(isDesktopApplication && navigator.userAgent.indexOf("Lisnd") >= 0);
+        return !(isDesktopApplication && navigator.userAgent.indexOf("Linux") >= 0);
     };
 
     NRS.isWebWalletLinkVisible = function() {
         if (NRS.isMobileApp()) {
             return false;
         }
-        return isDesktopApplication && navigator.userAgent.indexOf("Lisnd") == -1;
+        return isDesktopApplication && navigator.userAgent.indexOf("Linux") == -1;
     };
 
     NRS.isMobileApp = function () {
@@ -95,7 +95,7 @@ var NRS = (function (NRS) {
     };
 
     NRS.isShowDummyCheckbox = function() {
-        return isDesktopApplication && navigator.userAgent.indexOf("Lisnd") >= 0; // Correct rendering problem of checkboxes on Lisnd
+        return isDesktopApplication && navigator.userAgent.indexOf("Linux") >= 0; // Correct rendering problem of checkboxes on Linux
     };
 
     NRS.isDecodePeerHallmark = function() {

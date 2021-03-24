@@ -27,8 +27,8 @@ var NRS = (function(NRS, $) {
 		{alias: "nrsBetaVersionWin", status: "beta", prefix: "nxt-client-", ext: "exe"},
 		{alias: "nrsVersionMac", status: "release", prefix: "nxt-installer-", ext: "dmg"},
 		{alias: "nrsBetaVersionMac", status: "beta", prefix: "nxt-installer-", ext: "dmg"},
-		{alias: "nrsVersionLisnd", status: "release", prefix: "nxt-client-", ext: "sh"},
-		{alias: "nrsBetaVersionLisnd", status: "beta", prefix: "nxt-client-", ext: "sh"}
+		{alias: "nrsVersionLinux", status: "release", prefix: "nxt-client-", ext: "sh"},
+		{alias: "nrsBetaVersionLinux", status: "beta", prefix: "nxt-client-", ext: "sh"}
 	];
 	NRS.isOutdated = false;
 
