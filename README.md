@@ -1,12 +1,15 @@
----
+# Welcome to Sunda Coin!
 
-# Welcome to SND Coin!
 
----
 
-## What is SND Coin?
+![Sunda Coin](html/www/img/brand/logo.png)
 
-SND coin is a cryptocurrency created by ibnux based NXT.
+
+
+
+## What is Sunda Coin?
+
+Sunda coin is a cryptocurrency created by ibnux based NXT on behalf of Sunda Empire
 
 ---
 
